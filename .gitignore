@@ -1,0 +1,7 @@
+*.exe
+*.pdb
+*.cache
+*.suo
+*.xls
+*.dll
+CES.UI/*

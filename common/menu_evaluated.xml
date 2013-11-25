@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tree>
+  <TreeNode Text="员工信息管理" SingleClickExpand="true">
+    <TreeNode Text="上传人员名单" NavigateUrl="~/Pages/StaffManagement/UploadStaffInfo.aspx">
+    </TreeNode>
+  </TreeNode>
+  <TreeNode Text="述职报告管理" SingleClickExpand="true">
+    <TreeNode Text="制作述职报告" NavigateUrl="~/Pages/ReportManagement/MakeReport.aspx">
+    </TreeNode>
+  </TreeNode>
+  <TreeNode Text="考评表管理" SingleClickExpand="true">
+    <TreeNode Text="制作考评表" NavigateUrl="~/Pages/EvaluateTblManagement/MakeEvaluateTbl.aspx">
+    </TreeNode>
+  </TreeNode>
+  <TreeNode Text="短信平台" SingleClickExpand="true">
+    <TreeNode Text="发送短信" NavigateUrl="~/Pages/MsgManagement/SendMsg.aspx">
+    </TreeNode>
+  </TreeNode>
+  <TreeNode Text="考评管理" SingleClickExpand="true">
+    <TreeNode Text="考评" NavigateUrl="~/Pages/EvaluationManagement/Evaluate.aspx">
+    </TreeNode>
+    <TreeNode Text="查看结果" NavigateUrl="~/Pages/EvaluationManagement/CheckResult.aspx">
+    </TreeNode>
+  </TreeNode>
+  <TreeNode Text="系统管理" SingleClickExpand="true">
+    <TreeNode Text="考评管理" NavigateUrl="~/Pages/SystemManagement/SetEvaluationStage.aspx">
+    </TreeNode>
+    <TreeNode Text="数据管理" NavigateUrl="~/Pages/SystemManagement/DeleteFiles.aspx">
+    </TreeNode>
+  </TreeNode>
+  <TreeNode Text="账户管理" SingleClickExpand="true">
+    <TreeNode Text="修改密码" NavigateUrl="~/Pages/AccountManagement/ChangePasswd.aspx">
+    </TreeNode>
+  </TreeNode>  
+</Tree>
