@@ -3,5 +3,3 @@
 *.cache
 *.suo
 *.xls
-*.dll
-CES.UI/*
