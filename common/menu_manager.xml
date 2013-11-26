@@ -12,10 +12,6 @@
     <TreeNode Text="发送短信" NavigateUrl="~/Pages/MsgManagement/SendMsg.aspx?userid=[UserID]">
     </TreeNode>
   </TreeNode>
-  <TreeNode Text="考评管理" SingleClickExpand="true">
-    <TreeNode Text="考评" NavigateUrl="~/Pages/EvaluationManagement/Evaluate.aspx?userid=[UserID]">
-    </TreeNode>
-  </TreeNode>
   <TreeNode Text="系统管理" SingleClickExpand="true">
     <TreeNode Text="考评管理" NavigateUrl="~/Pages/SystemManagement/SetEvaluationStage.aspx?userid=[UserID]">
     </TreeNode>
