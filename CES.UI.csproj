@@ -68,7 +68,9 @@
     <Content Include="common\menu.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="common\menu_evaluator.xml" />
+    <Content Include="common\menu_evaluator.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="css\default.css" />
     <Content Include="css\main.css" />
     <Content Include="icon\accept.png" />
@@ -1901,6 +1903,7 @@
     <Content Include="Pages\ReportManagement\MakeReport.aspx" />
     <Content Include="Pages\StaffManagement\UploadStaffInfo.aspx" />
     <Content Include="Pages\SystemManagement\DeleteFiles.aspx" />
+    <Content Include="Pages\SystemManagement\iframe_ShowReport.aspx" />
     <Content Include="Pages\SystemManagement\SetEvaluationStage.aspx" />
     <Content Include="Style\alogin.css" />
     <Content Include="Style\CheckPost.css" />
@@ -2013,6 +2016,13 @@
     <Compile Include="Pages\SystemManagement\DeleteFiles.aspx.designer.cs">
       <DependentUpon>DeleteFiles.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SystemManagement\iframe_ShowReport.aspx.cs">
+      <DependentUpon>iframe_ShowReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SystemManagement\iframe_ShowReport.aspx.designer.cs">
+      <DependentUpon>iframe_ShowReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SystemManagement\SetEvaluationStage.aspx.cs">
       <DependentUpon>SetEvaluationStage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2023,9 +2033,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="common\menu_super.xml" />
-    <Content Include="common\menu_manager.xml" />
-    <Content Include="common\menu_evaluated.xml" />
+    <Content Include="common\menu_super.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="common\menu_manager.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="common\menu_evaluated.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="images\logo\logo.psd" />
     <None Include="images\logo\logo_127.psd" />
   </ItemGroup>

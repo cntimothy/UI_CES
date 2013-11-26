@@ -34,7 +34,7 @@
                         </Items>
                     </x:Toolbar>
                     <x:Panel ID="Panel3" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
-                        Title="Panel" Width="800px" >
+                        Title="Panel" Width="880px" >
                         <Items>
                             <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm" ShowBorder="false" ShowHeader="false">
                                 <Items>
@@ -42,7 +42,7 @@
                             </x:Label>
                                 </Items>
                             </x:SimpleForm>
-                            <x:Grid ID="Grid1" runat="server" Title="被考评人名单" AutoScroll="true" EnableRowNumber="true" AutoHeight="true" Width="750px">
+                            <x:Grid ID="Grid1" runat="server" Title="被考评人名单" AutoScroll="true" EnableRowNumber="true" AutoHeight="true" Width="830px">
                                 <Columns>
                                     <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="工号"
                                         Hidden="false" />
@@ -54,6 +54,9 @@
                                         Hidden="false" />
                                     <x:BoundField Width="300px" DataField="Status" DataFormatString="{0}" HeaderText="考评完成情况"
                                         Hidden="false" />
+                                    <x:WindowField TextAlign="Center" Width="80px" WindowID="Window_ShowReport" Text="述职报告"
+                                        ToolTip="查看述职报告" DataIFrameUrlFields="ID,Name" DataIFrameUrlFormatString="iframe_ShowReport.aspx?id={0}&name={1}"
+                                        Title="操作" IFrameUrl="iframe_ShowReport.aspx" />
                                 </Columns>
                             </x:Grid>
                         </Items>
@@ -62,6 +65,11 @@
             </x:Panel>
         </Items>
     </x:Panel>
+    <x:Window ID="Window_ShowReport" Title="述职报告" Popup="false" EnableIFrame="true" IFrameUrl="about:blank"
+        EnableMaximize="true" Target="Top" EnableResize="true" runat="server" EnableClose="false"
+        IsModal="true" Width="800px" EnableConfirmOnClose="true" OnClose="Window_Close"
+        Height="550px">
+    </x:Window>
     </form>
 </body>
 </html>
