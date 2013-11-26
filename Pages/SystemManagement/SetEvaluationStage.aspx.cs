@@ -149,21 +149,28 @@ namespace CES.UI.Pages.SystemManagement
         /// </summary>
         private void setEvaluationStageLabel()
         {
-            EvaluationStage evaluationStage = (EvaluationStage)Enum.Parse(typeof(EvaluationStage), ViewState["EvaluationStage"].ToString());
-            switch (evaluationStage)
+            try
             {
-                case EvaluationStage.UNSTARTED:
-                    Label_EvaluationStage.Text = "未开始";
-                    break;
-                case EvaluationStage.STARTED:
-                    Label_EvaluationStage.Text = "已开始";
-                    break;
-                case EvaluationStage.FINISHED:
-                    Label_EvaluationStage.Text = "已结束";
-                    break;
-                default:
-                    Label_EvaluationStage.Text = "未定义";
-                    break;
+                EvaluationStage evaluationStage = (EvaluationStage)Enum.Parse(typeof(EvaluationStage), ViewState["EvaluationStage"].ToString());
+                switch (evaluationStage)
+                {
+                    case EvaluationStage.UNSTARTED:
+                        Label_EvaluationStage.Text = "未开始";
+                        break;
+                    case EvaluationStage.STARTED:
+                        Label_EvaluationStage.Text = "已开始";
+                        break;
+                    case EvaluationStage.FINISHED:
+                        Label_EvaluationStage.Text = "已结束";
+                        break;
+                    default:
+                        Label_EvaluationStage.Text = "未定义";
+                        break;
+                }
+            }
+            catch (Exception)   //如果未能获取当前考评状态，则显示状态为未知
+            {
+                Label_EvaluationStage.Text = "未知！";
             }
         }
 
@@ -172,21 +179,27 @@ namespace CES.UI.Pages.SystemManagement
         /// </summary>
         private void setButtonEnabled()
         {
-            EvaluationStage evaluationStage = (EvaluationStage)Enum.Parse(typeof(EvaluationStage), ViewState["EvaluationStage"].ToString());
-            switch (evaluationStage)
+            try
             {
-                case EvaluationStage.UNSTARTED:
-                    Button_Start.Enabled = true;
-                    break;
-                case EvaluationStage.STARTED:
-                    Button_Stop.Enabled = true;
-                    break;
-                case EvaluationStage.FINISHED:
-                    Button_Init.Enabled = true;
-                    break;
-                default:
-                    Label_EvaluationStage.Text = "未定义";
-                    break;
+                EvaluationStage evaluationStage = (EvaluationStage)Enum.Parse(typeof(EvaluationStage), ViewState["EvaluationStage"].ToString());
+                switch (evaluationStage)
+                {
+                    case EvaluationStage.UNSTARTED:
+                        Button_Start.Enabled = true;
+                        break;
+                    case EvaluationStage.STARTED:
+                        Button_Stop.Enabled = true;
+                        break;
+                    case EvaluationStage.FINISHED:
+                        Button_Init.Enabled = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception) //如果未能获取当前考评状态，则按钮都不可用
+            { 
+                
             }
         }
         #endregion
