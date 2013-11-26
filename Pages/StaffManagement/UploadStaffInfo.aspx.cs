@@ -75,14 +75,12 @@ namespace CES.UI.Pages.StaffManagement
             if (StaffManagementCtrl.InportExcel(fileName, ref createCount, ref updateCount, ref exception))
             {
                 FileUpload_ExcelFile.Reset();
-                //Alert.ShowInTop("上传成功！", MessageBoxIcon.Information);
                 showInformation("上传成功！");
                 bindStaffInfoToGrid();
             }
             else
             {
                 FileUpload_ExcelFile.Reset();
-                //Alert.ShowInTop("上传失败！\n失败原因：" + exception, MessageBoxIcon.Error);
                 showError("上传失败！", exception);
             }
         }
@@ -144,14 +142,12 @@ namespace CES.UI.Pages.StaffManagement
             }
             if (StaffManagementCtrl.DeleteByIDs(IDs, ref exception))
             {
-                //Alert.ShowInTop("删除成功", MessageBoxIcon.Information);
                 showInformation("删除成功！");
                 hfSelectedIDS.Text = "";
                 bindStaffInfoToGrid();
             }
             else
             {
-                //Alert.ShowInTop("删除失败\n原因：" + exception, MessageBoxIcon.Error);
                 showError("删除失败！", exception);
             }
         }

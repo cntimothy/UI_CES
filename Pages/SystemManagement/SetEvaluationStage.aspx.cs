@@ -51,6 +51,9 @@ namespace CES.UI.Pages.SystemManagement
             if (SystemManagementCtrl.InitSystem(ref exception))
             {
                 showInformation("设置成功！");
+                bindStaffInfoToGrid();  //员工信息
+                setEvaluationStageLabel();  //当前考评状态Label
+                setButtonEnabled(); //按钮
             }
             else
             {
@@ -69,6 +72,9 @@ namespace CES.UI.Pages.SystemManagement
             if (SystemManagementCtrl.StartEvaluation(ref exception))
             {
                 showInformation("设置成功！");
+                bindStaffInfoToGrid();  //员工信息
+                setEvaluationStageLabel();  //当前考评状态Label
+                setButtonEnabled(); //按钮
             }
             else
             {
@@ -87,6 +93,9 @@ namespace CES.UI.Pages.SystemManagement
             if (SystemManagementCtrl.StopEvaluation(ref exception))
             {
                 showInformation("设置成功！");
+                bindStaffInfoToGrid();  //员工信息
+                setEvaluationStageLabel();  //当前考评状态Label
+                setButtonEnabled(); //按钮
             }
             else
             {

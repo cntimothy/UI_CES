@@ -12,9 +12,19 @@
     <x:Panel ID="Panel1" runat="server" BodyPadding="0px" ShowBorder="false" ShowHeader="false"
         Title="Panel" AutoScroll="true">
         <Items>
-            <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="true" ShowHeader="true"
+            <x:Panel ID="Panel2" runat="server" BodyPadding="0px" ShowBorder="true" ShowHeader="true"
                 Title="Panel">
                 <Items>
+                    <x:Toolbar ID="Toolbar1" runat="server">
+                        <Items>
+                            <x:Button ID="Button_Refresh" runat="server" Text="刷新" OnClick="Button_Refresh_Close">
+                            </x:Button>
+                            <x:ToolbarFill ID="ToolbarFill1" runat="server">
+                            </x:ToolbarFill>
+                            <x:Button ID="Button_Close" runat="server" Text="关闭">
+                            </x:Button>
+                        </Items>
+                    </x:Toolbar>
                     <x:Label ID="Label_Report" runat="server" EncodeText="false" Label="Label" Text="">
                     </x:Label>
                 </Items>

@@ -62,13 +62,13 @@
         </Items>
     </x:Panel>
     <x:Window ID="Window_ShowReport" Title="述职报告" Popup="false" EnableIFrame="true" IFrameUrl="about:blank"
-        EnableMaximize="true" Target="Top" EnableResize="true" runat="server" EnableClose="true"
-        IsModal="true" Width="800px" EnableConfirmOnClose="true"
+        EnableMaximize="true" Target="Top" EnableResize="true" runat="server" EnableClose="false"
+        IsModal="true" Width="800px" EnableConfirmOnClose="true" OnClose="Window_Close"
         Height="550px">
     </x:Window>
     <x:Window ID="Window_Evaluate" Title="考评" Popup="false" EnableIFrame="true" IFrameUrl="about:blank"
-        EnableMaximize="true" Target="Top" EnableResize="true" runat="server" EnableClose="true"
-        OnClose="Window_Evaluate_Close" IsModal="true" Width="900px" EnableConfirmOnClose="true"
+        EnableMaximize="true" Target="Top" EnableResize="true" runat="server" EnableClose="false"
+        OnClose="Window_Close" IsModal="true" Width="900px" EnableConfirmOnClose="true"
         Height="550px">
     </x:Window>
     </form>

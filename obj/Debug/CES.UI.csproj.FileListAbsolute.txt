@@ -1,0 +1,11 @@
+E:\projects\CES\CES.UI\bin\SQS.dll
+E:\projects\CES\CES.UI\bin\SQS.pdb
+E:\projects\CES\CES.UI\bin\CES.Controller.dll
+E:\projects\CES\CES.UI\bin\CES.DataStructure.dll
+E:\projects\CES\CES.UI\bin\FineUI.dll
+E:\projects\CES\CES.UI\bin\Newtonsoft.Json.dll
+E:\projects\CES\CES.UI\bin\CES.Controller.pdb
+E:\projects\CES\CES.UI\bin\CES.DataStructure.pdb
+E:\projects\CES\CES.UI\obj\Debug\ResolveAssemblyReference.cache
+E:\projects\CES\CES.UI\obj\Debug\SQS.dll
+E:\projects\CES\CES.UI\obj\Debug\SQS.pdb

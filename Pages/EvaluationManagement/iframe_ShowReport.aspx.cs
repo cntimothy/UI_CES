@@ -17,6 +17,7 @@ namespace CES.UI.Pages.EvaluationManagement
             if (!IsPostBack)
             {
                 writeEvaluatedIDNameToViewState(); //将被考评人ID姓名写入ViewState
+                Button_Close.OnClientClick = ActiveWindow.GetHidePostBackReference(); //注册关闭按钮事件
                 loadEvaluatedName();
                 loadReport();
             }
@@ -24,6 +25,18 @@ namespace CES.UI.Pages.EvaluationManagement
         #endregion
 
         #region Event
+        /// <summary>
+        /// 刷新按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Refresh_Close(object sender, EventArgs e)
+        {
+            loadReport();
+        }
+        #endregion
+
+        #region Private Method
         /// <summary>
         /// 载入
         /// </summary>

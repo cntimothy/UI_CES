@@ -50,6 +50,9 @@ namespace CES.UI.Pages.EvaluationManagement
             if (EvaluationManagementCtrl.SubmitScoreByID(evaluatorID, ref exception))
             {
                 showInformation("提交成功！");
+                //刷新
+                bindStaffInfoToGrid();
+                setEvaluationStatueLabel();
                 return;
             }
             else
@@ -64,7 +67,7 @@ namespace CES.UI.Pages.EvaluationManagement
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void Window_Evaluate_Close(object sender, FineUI.WindowCloseEventArgs e)
+        protected void Window_Close(object sender, FineUI.WindowCloseEventArgs e)
         {
             bindStaffInfoToGrid();
             setEvaluationStatueLabel();

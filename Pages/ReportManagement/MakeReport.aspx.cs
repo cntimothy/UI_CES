@@ -75,7 +75,7 @@ namespace CES.UI.Pages.ReportManagement
                 EvaluationStage evaluationStage = EvaluationStage.UNSTARTED;
                 if (CommonCtrl.GetCurrentStage(ref evaluationStage, ref exception)) //获取当前考评状态
                 {
-                    if (evaluationStage == EvaluationStage.UNSTARTED) //如果当前考评状态是已开始，则显示HTMLEdit，否则显示Label
+                    if (evaluationStage == EvaluationStage.UNSTARTED) //如果当前考评状态是未开始，则显示HTMLEdit，否则显示Label
                     {
                         HtmlEditor_Report.Visible = true;
                         HtmlEditor_Report.Text = report;
