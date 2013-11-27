@@ -20,12 +20,20 @@ namespace CES.UI
             // 注册客户端脚本，服务器端控件ID和客户端ID的映射关系
             JObject ids = GetClientIDS(mainTabStrip);
 
-            //从Session中读取UserID
-            string userID = Session["UserID"].ToString();
+            //从Session中读取UserID和UserType
+            try
+            {
+                string userID = Session["UserID"].ToString();
+                UserType userType = (UserType)Session["UserType"];
 
-            Accordion accordionMenu = InitAccordionMenu(userID);
-            ids.Add("mainMenu", accordionMenu.ClientID);
-            ids.Add("menuType", "accordion");
+                Accordion accordionMenu = InitAccordionMenu(userID, userType);
+                ids.Add("mainMenu", accordionMenu.ClientID);
+                ids.Add("menuType", "accordion");
+            }
+            catch (Exception)
+            { 
+                
+            }
 
 
             // 只在页面第一次加载时注册客户端用到的脚本
@@ -41,7 +49,7 @@ namespace CES.UI
         /// </summary>
         /// <param name="userID">用户名</param>
         /// <returns></returns>
-        private Accordion InitAccordionMenu(string userID)
+        private Accordion InitAccordionMenu(string userID, UserType userType)
         {
             Accordion accordionMenu = new Accordion();
             accordionMenu.ID = "accordionMenu";
@@ -50,10 +58,23 @@ namespace CES.UI
             accordionMenu.ShowHeader = false;
             Region2.Items.Add(accordionMenu);
 
-            UserType userType = (UserType)Session["UserType"];
-            XmlDocument xmlDoc;
-            xmlDoc = XmlDataSource.GetXmlDocument();
-            
+
+            XmlDocument xmlDoc = new XmlDocument();
+            switch (userType)
+            {
+                case UserType.SUPER:
+                    xmlDoc = XmlDataSource_Super.GetXmlDocument();
+                    break;
+                case UserType.MANAGER:
+                    xmlDoc = XmlDataSource_Manager.GetXmlDocument();
+                    break;
+                case UserType.EVALUATOR:
+                    xmlDoc = XmlDataSource_Evaluator.GetXmlDocument();
+                    break;
+                case UserType.EVALUATED:
+                    xmlDoc = XmlDataSource_Evaluated.GetXmlDocument();
+                    break;
+            }
             XmlNodeList xmlNodes = xmlDoc.SelectNodes("/Tree/TreeNode");
             foreach (XmlNode xmlNode in xmlNodes)
             {
@@ -88,6 +109,7 @@ namespace CES.UI
             }
 
             return accordionMenu;
+
         }
 
         private JObject GetClientIDS(params ControlBase[] ctrls)
@@ -107,7 +129,12 @@ namespace CES.UI
         {
             if (!IsPostBack)
             {
-                UserName.Text += (string)Session["UserName"];
+                //if (!checkSession()) //检查Session
+                //{
+                //    PageContext.Redirect("../Login.aspx", "top");
+                //    return;
+                //}
+                UserName.Text += Session["UserName"].ToString(); ;
             }
         }
         #endregion
@@ -212,6 +239,23 @@ namespace CES.UI
             return iconUrl;
         }
 
+        #endregion
+        /// <summary>
+        /// 检查Session，如果session没问题，则返回true，否则返回false
+        /// </summary>
+        /// <returns></returns>
+        #region Private Method
+        private bool checkSession()
+        {
+            if (Session["UserID"] == null || Session["UserName"] == null || Session["UserType"] == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         #endregion
     }
 }

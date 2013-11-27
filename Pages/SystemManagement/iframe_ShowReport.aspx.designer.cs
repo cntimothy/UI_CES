@@ -10,7 +10,7 @@
 namespace CES.UI.Pages.SystemManagement {
     
     
-    public partial class SetEvaluationStage {
+    public partial class iframe_ShowReport {
         
         /// <summary>
         /// form1 控件。
@@ -67,102 +67,30 @@ namespace CES.UI.Pages.SystemManagement {
         protected global::FineUI.Button Button_Refresh;
         
         /// <summary>
-        /// ToolbarSeparator1 控件。
+        /// ToolbarFill1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.ToolbarSeparator ToolbarSeparator1;
+        protected global::FineUI.ToolbarFill ToolbarFill1;
         
         /// <summary>
-        /// Button_Init 控件。
+        /// Button_Close 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Button Button_Init;
+        protected global::FineUI.Button Button_Close;
         
         /// <summary>
-        /// ToolbarSeparator2 控件。
+        /// Label_Report 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.ToolbarSeparator ToolbarSeparator2;
-        
-        /// <summary>
-        /// Button_Start 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Button Button_Start;
-        
-        /// <summary>
-        /// ToolbarSeparator3 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.ToolbarSeparator ToolbarSeparator3;
-        
-        /// <summary>
-        /// Button_Stop 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Button Button_Stop;
-        
-        /// <summary>
-        /// Panel3 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Panel Panel3;
-        
-        /// <summary>
-        /// SimpleForm1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.SimpleForm SimpleForm1;
-        
-        /// <summary>
-        /// Label_EvaluationStage 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Label Label_EvaluationStage;
-        
-        /// <summary>
-        /// Grid1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Grid Grid1;
-        
-        /// <summary>
-        /// Window_ShowReport 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Window Window_ShowReport;
+        protected global::FineUI.Label Label_Report;
     }
 }

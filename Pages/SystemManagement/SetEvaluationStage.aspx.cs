@@ -102,6 +102,16 @@ namespace CES.UI.Pages.SystemManagement
                 showError("设置失败！", exception);
             }
         }
+
+        /// <summary>
+        /// 内联框架关闭事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Window_Close(object sender, FineUI.WindowCloseEventArgs e)
+        {
+            bindStaffInfoToGrid();
+        }
         #endregion
 
         #region Private Method

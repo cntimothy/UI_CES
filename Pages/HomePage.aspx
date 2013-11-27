@@ -84,6 +84,8 @@
     </asp:XmlDataSource>
     <asp:XmlDataSource ID="XmlDataSource_Evaluator" runat="server" DataFile="../common/menu_evaluator.xml">
     </asp:XmlDataSource>
+    <asp:XmlDataSource ID="XmlDataSource_Null" runat="server" DataFile="../common/menu_null.xml">
+    </asp:XmlDataSource>
     <asp:XmlDataSource ID="XmlDataSource" runat="server" DataFile="../common/menu.xml">
     </asp:XmlDataSource>
     </form>
