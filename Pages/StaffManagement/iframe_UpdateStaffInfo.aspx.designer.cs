@@ -10,7 +10,7 @@
 namespace CES.UI.Pages.StaffManagement {
     
     
-    public partial class UploadStaffInfo {
+    public partial class iframe_UpdateStaffInfo {
         
         /// <summary>
         /// form1 控件。
@@ -40,13 +40,13 @@ namespace CES.UI.Pages.StaffManagement {
         protected global::FineUI.Panel Panel1;
         
         /// <summary>
-        /// Panel3 控件。
+        /// Panel2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel3;
+        protected global::FineUI.Panel Panel2;
         
         /// <summary>
         /// Toolbar1 控件。
@@ -58,13 +58,13 @@ namespace CES.UI.Pages.StaffManagement {
         protected global::FineUI.Toolbar Toolbar1;
         
         /// <summary>
-        /// FileUpload_ExcelFile 控件。
+        /// Button_Reset 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.FileUpload FileUpload_ExcelFile;
+        protected global::FineUI.Button Button_Reset;
         
         /// <summary>
         /// ToolbarSeparator1 控件。
@@ -76,67 +76,13 @@ namespace CES.UI.Pages.StaffManagement {
         protected global::FineUI.ToolbarSeparator ToolbarSeparator1;
         
         /// <summary>
-        /// Label1 控件。
+        /// Button_Save 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Label Label1;
-        
-        /// <summary>
-        /// Label_FileName 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Label Label_FileName;
-        
-        /// <summary>
-        /// ToolbarSeparator2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.ToolbarSeparator ToolbarSeparator2;
-        
-        /// <summary>
-        /// Button_Submit 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Button Button_Submit;
-        
-        /// <summary>
-        /// ToolbarSeparator3 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.ToolbarSeparator ToolbarSeparator3;
-        
-        /// <summary>
-        /// Button_Delete 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Button Button_Delete;
-        
-        /// <summary>
-        /// ToolbarSeparator4 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.ToolbarSeparator ToolbarSeparator4;
+        protected global::FineUI.Button Button_Save;
         
         /// <summary>
         /// ToolbarFill1 控件。
@@ -148,22 +94,22 @@ namespace CES.UI.Pages.StaffManagement {
         protected global::FineUI.ToolbarFill ToolbarFill1;
         
         /// <summary>
-        /// Button_DownloadTemplate 控件。
+        /// Button_Close 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Button Button_DownloadTemplate;
+        protected global::FineUI.Button Button_Close;
         
         /// <summary>
-        /// Panel2 控件。
+        /// Panel3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel2;
+        protected global::FineUI.Panel Panel3;
         
         /// <summary>
         /// SimpleForm1 控件。
@@ -175,39 +121,57 @@ namespace CES.UI.Pages.StaffManagement {
         protected global::FineUI.SimpleForm SimpleForm1;
         
         /// <summary>
-        /// DropDownList_StaffType 控件。
+        /// Label_ID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.DropDownList DropDownList_StaffType;
+        protected global::FineUI.Label Label_ID;
         
         /// <summary>
-        /// Grid1 控件。
+        /// TextBox_Name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Grid Grid1;
+        protected global::FineUI.TextBox TextBox_Name;
         
         /// <summary>
-        /// hfSelectedIDS 控件。
+        /// DropDownList_Sex 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.HiddenField hfSelectedIDS;
+        protected global::FineUI.DropDownList DropDownList_Sex;
         
         /// <summary>
-        /// Window_Update 控件。
+        /// DropDownList_Job 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Window Window_Update;
+        protected global::FineUI.DropDownList DropDownList_Job;
+        
+        /// <summary>
+        /// DropDownList_Role 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.DropDownList DropDownList_Role;
+        
+        /// <summary>
+        /// NumberBox_Tele 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.NumberBox NumberBox_Tele;
     }
 }

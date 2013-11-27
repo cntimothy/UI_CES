@@ -1899,6 +1899,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Pages\MsgManagement\SendMsg.aspx" />
     <Content Include="Pages\ReportManagement\MakeReport.aspx" />
+    <Content Include="Pages\StaffManagement\iframe_UpdateStaffInfo.aspx" />
     <Content Include="Pages\StaffManagement\UploadStaffInfo.aspx" />
     <Content Include="Pages\SystemManagement\DeleteFiles.aspx" />
     <Content Include="Pages\SystemManagement\SetEvaluationStage.aspx" />
@@ -1998,6 +1999,13 @@
     </Compile>
     <Compile Include="Pages\ReportManagement\MakeReport.aspx.designer.cs">
       <DependentUpon>MakeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StaffManagement\iframe_UpdateStaffInfo.aspx.cs">
+      <DependentUpon>iframe_UpdateStaffInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\StaffManagement\iframe_UpdateStaffInfo.aspx.designer.cs">
+      <DependentUpon>iframe_UpdateStaffInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\StaffManagement\UploadStaffInfo.aspx.cs">
       <DependentUpon>UploadStaffInfo.aspx</DependentUpon>

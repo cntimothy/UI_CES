@@ -46,18 +46,20 @@
                         </Items>
                     </x:Toolbar>
                     <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
-                        Title="" Width="750px">
+                        Title="" Width="800px">
                         <Items>
-                            <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm" ShowBorder="false" ShowHeader="false">
+                            <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm"
+                                ShowBorder="false" ShowHeader="false">
                                 <Items>
-                                    <x:DropDownList ID="DropDownList_StaffType" runat="server" Label="请选择员工类型" AutoPostBack="true" OnSelectedIndexChanged="DropDownList_StaffType_SelectedChanged">
+                                    <x:DropDownList ID="DropDownList_StaffType" runat="server" Label="请选择员工类型" AutoPostBack="true"
+                                        OnSelectedIndexChanged="DropDownList_StaffType_SelectedChanged">
                                         <x:ListItem EnableSelect="true" Selected="true" Text="所有人" Value="0" />
                                         <x:ListItem EnableSelect="true" Selected="false" Text="中层干部" Value="1" />
                                     </x:DropDownList>
                                 </Items>
                             </x:SimpleForm>
                             <x:Grid ID="Grid1" runat="server" Title="员工名单" AllowPaging="true" PageSize="20" EnableRowNumber="true"
-                                Height="500px" Width="680px" AutoScroll="true" DataKeyNames="ID" EnableCheckBoxSelect="true"
+                                Height="500px" Width="730px" AutoScroll="true" DataKeyNames="ID" EnableCheckBoxSelect="true"
                                 CheckBoxSelectOnly="true" OnPageIndexChange="Grid1_PageIndexChange" ClearSelectedRowsAfterPaging="false">
                                 <Columns>
                                     <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="工号"
@@ -66,12 +68,15 @@
                                         Hidden="false" />
                                     <x:BoundField Width="50px" DataField="Sex" DataFormatString="{0}" HeaderText="性别"
                                         Hidden="false" />
-                                    <x:BoundField Width="150px" ExpandUnusedSpace="true" DataField="Job" DataFormatString="{0}" HeaderText="职务"
-                                        Hidden="false" />
+                                    <x:BoundField Width="150px" ExpandUnusedSpace="true" DataField="Job" DataFormatString="{0}"
+                                        HeaderText="职务" Hidden="false" />
                                     <x:BoundField Width="80px" DataField="Role" DataFormatString="{0}" HeaderText="分类"
                                         Hidden="false" />
                                     <x:BoundField Width="150px" DataField="Tele" DataFormatString="{0}" HeaderText="电话"
                                         Hidden="false" />
+                                    <x:WindowField TextAlign="Center" Width="50px" WindowID="Window_Update" Text="修改" ToolTip="修改员工信息"
+                                        DataIFrameUrlFields="ID" DataIFrameUrlFormatString="iframe_UpdateStaffInfo.aspx?id={0}"
+                                        Title="编辑" IFrameUrl="iframe_UpdateStaffInfo.aspx" />
                                 </Columns>
                             </x:Grid>
                         </Items>
@@ -82,9 +87,9 @@
     </x:Panel>
     <x:HiddenField ID="hfSelectedIDS" runat="server">
     </x:HiddenField>
-    <x:Window ID="Window_Modify" runat="server" BodyPadding="5px" IsModal="true" Popup="false"
-        Title="修改" Width="500px" Height="400px" EnableClose="false" Target="Top" EnableResize="true"
-        EnableIFrame="true" IFrameUrl="about:blank">
+    <x:Window ID="Window_Update" runat="server" BodyPadding="5px" IsModal="true" Popup="false"
+        Title="修改" Width="500px" Height="400px" EnableClose="false" Target="Top" EnableResize="false"
+        EnableIFrame="true" IFrameUrl="about:blank" OnClose="Window_Update_Close">
     </x:Window>
     </form>
 </body>

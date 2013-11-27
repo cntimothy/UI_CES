@@ -161,6 +161,16 @@ namespace CES.UI.Pages.StaffManagement
         {
             bindStaffInfoToGrid();
         }
+
+        /// <summary>
+        /// 窗口关闭事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Window_Update_Close(object sender, FineUI.WindowCloseEventArgs e)
+        {
+            bindStaffInfoToGrid();
+        }
         #endregion
 
         #region Private Method
