@@ -93,9 +93,28 @@ namespace CES.UI.Pages.ReportManagement
                     return;
                 }
             }
-            else
+            else //如果获取失败，则根据当前考评状态显示空的HtmlEditor或者Label
             {
-                HtmlEditor_Report.Text = "";
+                HtmlEditor_Report.Text = ""; 
+                exception = "";
+                EvaluationStage evaluationStage = EvaluationStage.UNSTARTED;
+                if (CommonCtrl.GetCurrentStage(ref evaluationStage, ref exception)) //获取当前考评状态
+                {
+                    if (evaluationStage == EvaluationStage.UNSTARTED) //如果当前考评状态是未开始，则显示HTMLEdit，否则显示Label
+                    {
+                        HtmlEditor_Report.Visible = true;
+                    }
+                    else
+                    {
+                        Label_Report.Visible = true;
+                    }
+                }
+                else
+                {
+                    HtmlEditor_Report.Text = "";
+                    showError("获取考评状态失败！", exception);
+                    return;
+                }
                 showError("获取述职报告失败！", exception);
                 return;
             }
