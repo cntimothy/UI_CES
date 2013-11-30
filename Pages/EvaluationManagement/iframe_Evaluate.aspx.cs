@@ -240,7 +240,7 @@ namespace CES.UI.Pages.EvaluationManagement
                     return true;
                 }
                 int i = Convert.ToInt32(item);
-                if (i < 0 || i > 10)
+                if (i < 0 || i > 100)
                 {
                     return false;
                 }
