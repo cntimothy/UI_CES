@@ -35,7 +35,7 @@
                                 </Items>
                             </x:SimpleForm>
                             <x:Grid ID="Grid1" runat="server" Title="被考评人名单" Width="730px" EnableRowNumber="true"
-                                DataKeyNames="ID,Name" AutoHeight="true">
+                                DataKeyNames="ID,Name" AutoHeight="true" OnPreRowDataBound="Grid1_PreRowDataBound">
                                 <Columns>
                                     <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="工号"
                                         Hidden="false" />
@@ -50,7 +50,7 @@
                                     <x:WindowField TextAlign="Center" Width="80px" WindowID="Window_ShowReport" Text="述职报告"
                                         ToolTip="查看述职报告" DataIFrameUrlFields="ID,Name" DataIFrameUrlFormatString="iframe_ShowReport.aspx?id={0}&name={1}"
                                         Title="操作" IFrameUrl="iframe_ShowReport.aspx" />
-                                    <x:WindowField TextAlign="Center" Width="50px" WindowID="Window_Evaluate" Text="考评"
+                                    <x:WindowField TextAlign="Center" ColumnID="WindowField_Evaluate" Width="50px" WindowID="Window_Evaluate" Text="考评"
                                         ToolTip="开始考评" DataIFrameUrlFields="ID,Name" DataIFrameUrlFormatString="iframe_Evaluate.aspx?id={0}&name={1}"
                                         Title="操作" IFrameUrl="iframe_Evaluate.aspx" />
                                 </Columns>

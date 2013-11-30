@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using CES.Controller;
 using CES.DataStructure;
+using FineUI;
 
 namespace CES.UI.Pages.EvaluationManagement
 {
@@ -71,6 +72,21 @@ namespace CES.UI.Pages.EvaluationManagement
         {
             bindStaffInfoToGrid();
             setEvaluationStatueLabel();
+        }
+
+        /// <summary>
+        /// 行预绑定事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Grid1_PreRowDataBound(object sender, FineUI.GridPreRowEventArgs e)
+        {
+            WindowField windowField_Evaluate = Grid1.FindColumn("WindowField_Evaluate") as WindowField;
+            DataRowView row = e.DataItem as DataRowView;
+            if (row["Status"].ToString() == "已提交")
+            {
+                windowField_Evaluate.Enabled = false;
+            }
         }
         #endregion
 

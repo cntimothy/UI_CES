@@ -28,7 +28,7 @@
                                 <li class="list">&nbsp|&nbsp</li>
                                 <li class="list">
                                     <x:LinkButton ID="LoginOut" runat="server" Label="Label" Text="注销" ConfirmText="确定注销？"
-                                         OnClick="LoginOut_Click">
+                                        OnClick="LoginOut_Click">
                                     </x:LinkButton>
                                 </li>
                             </ul>
@@ -66,7 +66,7 @@
                                     <x:ContentPanel ID="ContentPanel2" ShowBorder="false" BodyPadding="10px" ShowHeader="false"
                                         AutoScroll="true" CssClass="intro" runat="server">
                                         <p>
-                                            欢迎使用</p>
+                                            欢迎使用同济大学校医院考评系统</p>
                                     </x:ContentPanel>
                                 </Items>
                             </x:Tab>
