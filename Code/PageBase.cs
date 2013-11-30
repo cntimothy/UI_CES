@@ -8,6 +8,7 @@ using System.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using FineUI;
+using System.IO;
 
 
 namespace CES.UI
@@ -124,14 +125,49 @@ namespace CES.UI
         }
 
         /// <summary>
-        /// 显示错误信息
+        /// 显示错误信息，同时将错误信息写入log
         /// </summary>
         /// <param name="message"></param>
         /// <param name="reason"></param>
         protected void showError(string message, string reason)
         {
             Alert.ShowInTop(message + "\n原因：" + reason, MessageBoxIcon.Warning);
+            writeErrorToLog(message, reason);
         }
+
+
+        /// <summary>
+        /// 将错误信息写入log
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="reason"></param>
+        protected void writeErrorToLog(string message, string reason)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(DateTime.Now.ToLocalTime().ToString())
+                .Append(": ")
+                .Append("message");
+            sb.AppendLine("原因：")
+                .Append(reason);
+
+            string logPath = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"log\NormalException.log";
+            FileStream fs = new FileStream(logPath, FileMode.Append);
+            StreamWriter sw = new StreamWriter(fs, Encoding.Default);
+            try
+            {
+                sw.Write(sb.ToString());
+                sw.WriteLine();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                sw.Close();
+                fs.Close();
+            }
+        }        
 
         /// <summary>
         /// 显示信息

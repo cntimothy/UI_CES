@@ -52,7 +52,7 @@ namespace CES.UI.Pages.EvaluationManagement
             }
             else
             {
-                showError("述职报告载入失败！", exception);
+                writeErrorToLog("述职报告载入失败！", exception);
                 return;
             }
         }

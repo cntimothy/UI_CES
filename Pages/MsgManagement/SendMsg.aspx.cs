@@ -115,7 +115,7 @@ namespace CES.UI.Pages.MsgManagement
             }
             else
             {
-                showError("获取员工信息失败！", exception);
+                writeErrorToLog("获取员工信息失败！", exception);
                 table.Clear();
                 Grid1.DataSource = table;
                 Grid1.DataBind();

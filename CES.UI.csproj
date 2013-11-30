@@ -73,6 +73,7 @@
     </Content>
     <Content Include="css\default.css" />
     <Content Include="css\main.css" />
+    <Content Include="Global.asax" />
     <Content Include="icon\accept.png" />
     <Content Include="icon\add.png" />
     <Content Include="icon\anchor.png" />
@@ -1928,10 +1929,14 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="ErrorPage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Pages\AccountManagement\ChangePasswd.aspx.cs">
       <DependentUpon>ChangePasswd.aspx</DependentUpon>
@@ -2039,6 +2044,13 @@
       <DependentUpon>SetEvaluationStage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="common\menu_super.xml">
@@ -2055,6 +2067,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="downloadfiles\template\" />
+    <Folder Include="log\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>

@@ -106,7 +106,7 @@ namespace CES.UI.Pages.EvaluationManagement
             }
             else
             {
-                showError("获取员工信息失败！", exception);
+                writeErrorToLog("获取员工信息失败！", exception);
                 table.Clear();
                 Grid1.DataSource = table;
                 Grid1.DataBind();

@@ -115,7 +115,7 @@ namespace CES.UI.Pages.ReportManagement
                     showError("获取考评状态失败！", exception);
                     return;
                 }
-                showError("获取述职报告失败！", exception);
+                writeErrorToLog("获取述职报告失败！", exception);
                 return;
             }
         }
