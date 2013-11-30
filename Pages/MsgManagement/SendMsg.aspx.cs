@@ -85,6 +85,16 @@ namespace CES.UI.Pages.MsgManagement
             UpdateSelectedRowIndexArray();
 
         }
+
+        /// <summary>
+        /// 只显示未提交CheckBox事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void CheckBox_OnlyShowUnsubmitted_CheckedChanged(object sender, EventArgs e)
+        {
+            bindStaffInfoToGrid();
+        }
         #endregion
 
         #region Private Method
@@ -95,7 +105,8 @@ namespace CES.UI.Pages.MsgManagement
         {
             string exception = "";
             DataTable table = new DataTable();
-            if (MsgManagementCtrl.GetAll(ref table, ref exception))
+            bool onlyShowUnsubmitted = CheckBox_OnlyShowUnsubmitted.Checked;
+            if (MsgManagementCtrl.GetAll(ref table, onlyShowUnsubmitted, ref exception))
             {
                 DataView dv = table.DefaultView;
                 dv.Sort = "Role ASC";
