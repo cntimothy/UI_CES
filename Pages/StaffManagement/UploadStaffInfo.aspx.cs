@@ -196,6 +196,7 @@ namespace CES.UI.Pages.StaffManagement
                 Grid1.DataSource = table;
                 Grid1.DataBind();
             }
+            clearHiddenField();
         }
 
         /// <summary>
@@ -276,6 +277,14 @@ namespace CES.UI.Pages.StaffManagement
                 }
             }
             Grid1.SelectedRowIndexArray = nextSelectedRowIndexArray.ToArray();
+        }
+
+        /// <summary>
+        /// 清除HiddenField
+        /// </summary>
+        private void clearHiddenField()
+        {
+            hfSelectedIDS.Text = "";
         }
         #endregion
     }

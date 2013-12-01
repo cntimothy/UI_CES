@@ -120,6 +120,7 @@ namespace CES.UI.Pages.MsgManagement
                 Grid1.DataSource = table;
                 Grid1.DataBind();
             }
+            clearHiddenField(); //清除HiddenField
         }
 
         /// <summary>
@@ -202,7 +203,14 @@ namespace CES.UI.Pages.MsgManagement
             }
             Grid1.SelectedRowIndexArray = nextSelectedRowIndexArray.ToArray();
         }
-
+        
+        /// <summary>
+        /// 清除HiddenField
+        /// </summary>
+        private void clearHiddenField()
+        {
+            hfSelectedIDS.Text = "";
+        }
         #endregion
     }
 }
