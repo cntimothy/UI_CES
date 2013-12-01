@@ -22,6 +22,7 @@ namespace CES.UI.Pages.EvaluationManagement
                 WriteUserIDToSession();
                 bindStaffInfoToGrid();      //绑定人员信息到grid
                 setEvaluationStatueLabel(); //设置当前考评状态label
+                setSubmitButton(); //设置提交按钮的可用性
             }
         }
         #endregion
@@ -114,7 +115,6 @@ namespace CES.UI.Pages.EvaluationManagement
             }
         }
 
-
         /// <summary>
         /// 设定当前考评状态label
         /// </summary>
@@ -153,6 +153,15 @@ namespace CES.UI.Pages.EvaluationManagement
         private void WriteUserIDToSession()
         {
             Session["UserID"] = Request.QueryString["userid"];
+        }
+
+        /// <summary>
+        /// 设置提交按钮的可用性
+        /// </summary>
+        private void setSubmitButton()
+        {
+            string evaluatorID = ViewState["UserID"].ToString();
+            Button_Submit.Enabled = EvaluationManagementCtrl.IsSubmitable(evaluatorID);
         }
         #endregion
     }

@@ -20,7 +20,7 @@
                             </x:Button>
                             <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                             </x:ToolbarSeparator>
-                            <x:Button ID="Button_Submit" runat="server" Text="提交" ConfirmText="确定提交？" OnClick="Button_Submit_Click">
+                            <x:Button ID="Button_Submit" runat="server" Text="提交" ConfirmText="确定提交？" OnClick="Button_Submit_Click" Enabled="false">
                             </x:Button>
                         </Items>
                     </x:Toolbar>
@@ -30,7 +30,7 @@
                             <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm"
                                 ShowBorder="false" ShowHeader="false">
                                 <Items>
-                                    <x:Label ID="Label_EvaluationStage" runat="server" Label="当前考评状态" Text="***">
+                                    <x:Label ID="Label_EvaluationStage" runat="server" Label="当前考评状态" Text="">
                                     </x:Label>
                                 </Items>
                             </x:SimpleForm>

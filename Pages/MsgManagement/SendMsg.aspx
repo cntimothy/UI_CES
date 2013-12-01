@@ -20,7 +20,7 @@
                             </x:Button>
                             <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                             </x:ToolbarSeparator>
-                            <x:Button ID="Button_Send" runat="server" Text="发送" OnClick="Button_Send_Click">
+                            <x:Button ID="Button_Send" runat="server" Text="发送" OnClick="Button_Send_Click" ConfirmText="确定发送？">
                             </x:Button>
                         </Items>
                     </x:Toolbar>
