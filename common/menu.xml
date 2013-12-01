@@ -23,7 +23,7 @@
     </TreeNode>
   </TreeNode>
   <TreeNode Text="系统管理" SingleClickExpand="true">
-    <TreeNode Text="考评管理" NavigateUrl="~/Pages/SystemManagement/SetEvaluationStage.aspx?userid=[UserID]">
+    <TreeNode Text="考评阶段设置" NavigateUrl="~/Pages/SystemManagement/SetEvaluationStage.aspx?userid=[UserID]">
     </TreeNode>
     <TreeNode Text="数据管理" NavigateUrl="~/Pages/SystemManagement/DeleteFiles.aspx?userid=[UserID]">
     </TreeNode>

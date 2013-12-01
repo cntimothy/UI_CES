@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Tree>
-  <TreeNode Text="短信平台" SingleClickExpand="true">
-    <TreeNode Text="发送短信" NavigateUrl="~/Pages/MsgManagement/SendMsg.aspx?userid=[UserID]">
-    </TreeNode>
-  </TreeNode>
   <TreeNode Text="考评管理" SingleClickExpand="true">
     <TreeNode Text="查看结果" NavigateUrl="~/Pages/EvaluationManagement/CheckResult.aspx?userid=[UserID]">
     </TreeNode>
