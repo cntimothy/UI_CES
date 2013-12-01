@@ -75,7 +75,8 @@ namespace CES.UI.Pages.StaffManagement
             if (StaffManagementCtrl.InportExcel(fileName, ref createCount, ref updateCount, ref exception))
             {
                 FileUpload_ExcelFile.Reset();
-                showInformation("上传成功！");
+                string message = "上传成功！新增" + createCount + "条记录，更新" + updateCount + "条记录。";
+                showInformation(message);
                 bindStaffInfoToGrid();
             }
             else
