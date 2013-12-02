@@ -30,11 +30,12 @@
                             <x:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
                             </x:ToolbarSeparator>
                             <x:Button ID="Button_Submit" runat="server" Text="开始上传" OnClick="Button_Submit_Click"
-                                Enabled="false">
+                                ConfirmText="确定上传？" Enabled="false">
                             </x:Button>
                             <x:ToolbarSeparator ID="ToolbarSeparator3" runat="server">
                             </x:ToolbarSeparator>
-                            <x:Button ID="Button_Delete" runat="server" Text="删除所选" OnClick="Button_Delete_Click">
+                            <x:Button ID="Button_Delete" runat="server" Text="删除所选" OnClick="Button_Delete_Click"
+                                ConfirmText="确定删除？">
                             </x:Button>
                             <x:ToolbarSeparator ID="ToolbarSeparator4" runat="server">
                             </x:ToolbarSeparator>
@@ -74,8 +75,8 @@
                                         Hidden="false" />
                                     <x:BoundField Width="150px" DataField="Tele" DataFormatString="{0}" HeaderText="电话"
                                         Hidden="false" />
-                                    <x:WindowField TextAlign="Center" Width="50px" WindowID="Window_Update" Text="修改" ToolTip="修改员工信息"
-                                        DataIFrameUrlFields="ID" DataIFrameUrlFormatString="iframe_UpdateStaffInfo.aspx?id={0}"
+                                    <x:WindowField TextAlign="Center" Width="50px" WindowID="Window_Update" Text="修改"
+                                        ToolTip="修改员工信息" DataIFrameUrlFields="ID" DataIFrameUrlFormatString="iframe_UpdateStaffInfo.aspx?id={0}"
                                         Title="编辑" IFrameUrl="iframe_UpdateStaffInfo.aspx" />
                                 </Columns>
                             </x:Grid>

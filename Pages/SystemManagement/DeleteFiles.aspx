@@ -14,11 +14,11 @@
         <Items>
             <x:Toolbar ID="Toolbar1" runat="server" CssStyle="width:100%">
                 <Items>
-                    <x:Button ID="Button_ClearAll" runat="server" Text="清空数据库" OnClick="Button_ClearAll_Click" ConfirmTitle="提示" ConfirmText="确定清空数据库？本操作不可恢复！">
+                    <x:Button ID="Button_ClearAll" runat="server" Text="清空数据库" OnClick="Button_ClearAll_Click" ConfirmText="确定清空数据库？本操作不可恢复！">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button_DeleteTempFiles" runat="server" Text="删除临时文件" OnClick="Button_DeleteTempFiles_Click" ConfirmTitle="提示" ConfirmText="确定删除临时文件？本操作不可恢复！">
+                    <x:Button ID="Button_DeleteTempFiles" runat="server" Text="删除临时文件" OnClick="Button_DeleteTempFiles_Click" ConfirmText="确定删除临时文件？本操作不可恢复！">
                     </x:Button>
                 </Items>
             </x:Toolbar>
