@@ -90,6 +90,7 @@ namespace CES.UI.Pages.StaffManagement
             DropDownList_Job.Items.Clear();
             if (CommonCtrl.GetJobIDNameDic(ref idNameDic, ref exception))
             {
+                DropDownList_Job.Items.Add("", "");
                 foreach (string id in idNameDic.Keys)
                 {
                     DropDownList_Job.Items.Add(idNameDic[id], id);
