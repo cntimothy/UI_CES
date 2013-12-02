@@ -24,6 +24,8 @@
                 <Items>
                     <x:Toolbar ID="Toolbar1" runat="server">
                         <Items>
+                            <x:Label ID="Label_Name" runat="server" Label="Label" Text="">
+                            </x:Label>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
                             <x:Button ID="Button_Save" runat="server" Text="保存" OnClick="Button_Save_Click">

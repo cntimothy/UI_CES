@@ -22,6 +22,7 @@ namespace CES.UI.Pages.EvaluationManagement
                 WriteUserIDToViewState();   //将UserID写入ViewState
                 WriteEvaluatedIDToViewState();
                 setButtonEvent();           //设置按钮事件
+                setEvaluatedName();
                 loadEvaluateTbl();
             }
         }
@@ -438,6 +439,14 @@ namespace CES.UI.Pages.EvaluationManagement
             {
                 return Int32.Parse(score);
             }
+        }
+
+        /// <summary>
+        /// 显示被考评人姓名
+        /// </summary>
+        private void setEvaluatedName()
+        {
+            Label_Name.Text = "被考评人姓名：" + Request.QueryString["name"];
         }
         #endregion
     }
