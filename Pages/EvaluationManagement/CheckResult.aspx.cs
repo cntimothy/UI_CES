@@ -45,6 +45,7 @@ namespace CES.UI.Pages.EvaluationManagement
                 if (EvaluationManagementCtrl.GetScoresByID(ref scoreList, id, ref exception))
                 {
                     StringBuilder sb = new StringBuilder();
+                    scoreList.Sort();
                     foreach (float score in scoreList)
                     {
                         sb.Append(score.ToString("F2") + " ");
@@ -70,6 +71,11 @@ namespace CES.UI.Pages.EvaluationManagement
             setEvaluationStatueLabel(); //设置当前考评状态Label
         }
 
+        /// <summary>
+        /// 导出按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button_Export_Click(object sender, EventArgs e)
         {
             string exception = "";
