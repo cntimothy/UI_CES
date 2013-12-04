@@ -122,7 +122,7 @@
                                 <ItemTemplate>
                                     <asp:DropDownList runat="server" ID="DropDownList_Reject" Visible="false" >
                                         <asp:ListItem Text="0" Value="0"></asp:ListItem>
-                                        <asp:ListItem Text="-10" Value="-10"></asp:ListItem>
+                                        <asp:ListItem Text="-100" Value="-100"></asp:ListItem>
                                     </asp:DropDownList>
                                 </ItemTemplate>
                             </x:TemplateField>

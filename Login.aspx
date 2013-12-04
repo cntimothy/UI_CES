@@ -16,7 +16,7 @@
             <li class="top2"></li>
             <li class="topA"></li>
             <li class="topB"><span>
-                <img src="../images/login/logo.gif" alt="" style="" />
+                <img src="../images/login/logo.png" alt="" style="" />
             </span></li>
             <li class="topC"></li>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">

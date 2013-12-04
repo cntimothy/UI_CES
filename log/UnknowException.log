@@ -1,1 +1,24 @@
-﻿
+2013/12/3 19:30:59发生内部错误！
+错误号：6473564
+内部错误:
+System.DivideByZeroException: 尝试除以零。
+   在 CES.DAL.CommonFunctions.EvaluateTblToModel(EvaluateTbl evaluateTbl, String evaluatorID, String evaluatedID, EvaluationCollect& ecModel, MyException& e) 位置 D:\projects\CES\CES.DAL\CommonFunctions.cs:行号 512
+   在 CES.Controller.EvaluationManagementCtrl.UpdateScoreByID(EvaluateTbl evaluateTbl, String evaluatorID, String evaluatedID, String& exception) 位置 D:\projects\CES\CES.Controller\EvaluationManagementCtrl.cs:行号 246
+   在 CES.UI.Pages.EvaluationManagement.iframe_Evaluate.Button_Save_Click(Object sender, EventArgs e) 位置 D:\projects\CES\CES.UI\Pages\EvaluationManagement\iframe_Evaluate.aspx.cs:行号 45
+   在 FineUI.Button.OnClick(EventArgs e)
+   在 FineUI.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)堆栈:
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.pages_evaluationmanagement_iframe_evaluate_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\9069909c\cb67865e\App_Web_ui1yucfq.2.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)内容:
+引发类型为“System.Web.HttpUnhandledException”的异常。来源:
+System.Web
+

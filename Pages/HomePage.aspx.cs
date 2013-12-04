@@ -134,7 +134,10 @@ namespace CES.UI
                 //    PageContext.Redirect("../Login.aspx", "top");
                 //    return;
                 //}
-                UserName.Text += Session["UserName"].ToString(); ;
+                if (Session["UserName"] != null)
+                {
+                    UserName.Text += Session["UserName"].ToString(); 
+                }
             }
         }
         #endregion

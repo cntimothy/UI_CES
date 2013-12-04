@@ -216,7 +216,7 @@ namespace CES.UI.Pages.EvaluationManagement
         /// <returns></returns>
         private bool isNumber(string[] items)
         {
-            string pattern = @"^\d*$";
+            string pattern = @"^[-]?\d*$";
             foreach (string item in items)
             {
                 if (!Regex.IsMatch(item, pattern))
@@ -243,6 +243,8 @@ namespace CES.UI.Pages.EvaluationManagement
                 int i = Convert.ToInt32(item);
                 if (i < 0 || i > 100)
                 {
+                    if (i == -100)
+                        return true;
                     return false;
                 }
             }
@@ -418,7 +420,7 @@ namespace CES.UI.Pages.EvaluationManagement
             }
             if (!isProperty(scoreList.ToArray()))
             {
-                exception = "有项目的分数不在0~10之间！";
+                exception = "有项目的分数不在0~100之间！";
                 return false;
             }
             return true;
