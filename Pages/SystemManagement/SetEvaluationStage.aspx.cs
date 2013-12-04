@@ -18,11 +18,7 @@ namespace CES.UI.Pages.SystemManagement
             {
                 //将UserID写入ViewState
                 WriteUserIDToViewState();
-                //将当前考评状态写入ViewState
-                loadEvaluationStageToViewStage();
-                bindStaffInfoToGrid();  //员工信息
-                setEvaluationStageLabel();  //当前考评状态Label
-                setButtonEnabled(); //按钮
+                refreshGridLabelButton(); //查询当前考评状态并根据其设置Grid、Button和Label
             }
         }
 
@@ -34,10 +30,7 @@ namespace CES.UI.Pages.SystemManagement
         /// <param name="e"></param>
         protected void Button_Refresh_Click(object sender, EventArgs e)
         {
-            loadEvaluationStageToViewStage();
-            bindStaffInfoToGrid();  //员工信息
-            setEvaluationStageLabel();  //当前考评状态Label
-            setButtonEnabled(); //按钮
+            refreshGridLabelButton(); //刷新Grid、Label和Button
         }
 
         /// <summary>
@@ -51,14 +44,12 @@ namespace CES.UI.Pages.SystemManagement
             if (SystemManagementCtrl.InitSystem(ref exception))
             {
                 showInformation("设置成功！");
-                bindStaffInfoToGrid();  //员工信息
-                setEvaluationStageLabel();  //当前考评状态Label
-                setButtonEnabled(); //按钮
             }
             else
             {
                 showError("设置失败！", exception);
             }
+            refreshGridLabelButton(); //刷新Grid、Label和Button
         }
 
         /// <summary>
@@ -72,14 +63,12 @@ namespace CES.UI.Pages.SystemManagement
             if (SystemManagementCtrl.StartEvaluation(ref exception))
             {
                 showInformation("设置成功！");
-                bindStaffInfoToGrid();  //员工信息
-                setEvaluationStageLabel();  //当前考评状态Label
-                setButtonEnabled(); //按钮
             }
             else
             {
                 showError("设置失败！", exception);
             }
+            refreshGridLabelButton(); //刷新Grid、Label和Button
         }
 
         /// <summary>
@@ -93,14 +82,12 @@ namespace CES.UI.Pages.SystemManagement
             if (SystemManagementCtrl.StopEvaluation(ref exception))
             {
                 showInformation("设置成功！");
-                bindStaffInfoToGrid();  //员工信息
-                setEvaluationStageLabel();  //当前考评状态Label
-                setButtonEnabled(); //按钮
             }
             else
             {
                 showError("设置失败！", exception);
             }
+            refreshGridLabelButton(); //刷新Grid、Label和Button
         }
 
         /// <summary>
@@ -110,7 +97,7 @@ namespace CES.UI.Pages.SystemManagement
         /// <param name="e"></param>
         protected void Window_Close(object sender, FineUI.WindowCloseEventArgs e)
         {
-            bindStaffInfoToGrid();
+            //查看述职报告后什么都不做
         }
         #endregion
 
@@ -211,6 +198,17 @@ namespace CES.UI.Pages.SystemManagement
             { 
                 
             }
+        }
+
+        /// <summary>
+        /// 刷新表格、标签和按钮
+        /// </summary>
+        private void refreshGridLabelButton()
+        {
+            loadEvaluationStageToViewStage(); //将当前考评状态写入ViewState
+            bindStaffInfoToGrid();  //员工信息
+            setEvaluationStageLabel();  //当前考评状态Label
+            setButtonEnabled(); //按钮
         }
         #endregion
     }
