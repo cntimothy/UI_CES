@@ -6,6 +6,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Text;
 using System.IO;
+using FineUI;
 
 namespace CES.UI
 {
@@ -47,7 +48,9 @@ namespace CES.UI
             sb.AppendLine();
             writelog(sb.ToString());
             Server.ClearError();
-            Server.Transfer(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"ErrorPage.aspx?errorno=" + errorNo, false);
+            Server.Transfer(@"..\..\ErrorPage.aspx?errorno=" + errorNo, false);
+            //PageContext.Redirect(@"..\..\ErrorPage.aspx?errorno=" + errorNo, "top");
+            //Alert.Show("系统发生错误");
         }
 
         protected void Session_End(object sender, EventArgs e)
@@ -68,13 +71,13 @@ namespace CES.UI
         private void writelog(string content)
         {
             string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"log\UnknowException.log";
-            FileStream fs = new FileStream(path, FileMode.Create);
+            FileStream fs = new FileStream(path, FileMode.Append);
             StreamWriter sw = new StreamWriter(fs);
             try
             {
                 sw.WriteLine(content);
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
