@@ -28,7 +28,7 @@
                             </x:Label>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
-                            <x:Button ID="Button_Save" runat="server" Text="保存" OnClick="Button_Save_Click" ConfirmText="请确保完成所有指标的打分！">
+                            <x:Button ID="Button_Save" runat="server" Text="保存" OnClick="Button_Save_Click">
                             </x:Button>
                             <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                             </x:ToolbarSeparator>
@@ -36,7 +36,8 @@
                             </x:Button>
                         </Items>
                     </x:Toolbar>
-                    <x:Grid ID="Grid1" runat="server" Title="关键岗位职责指标（优：81～100良：61～80中：31～60差：0～30）" ShowHeader="true" >
+                    <x:Grid ID="Grid1" runat="server" Title="关键岗位职责指标（优：81～100良：61～80中：31～60差：0～30）"
+                        ShowHeader="true">
                         <Columns>
                             <x:BoundField Width="100px" DataField="Title" DataFormatString="{0}" HeaderText="标题" />
                             <x:BoundField Width="600px" DataField="Quota" DataFormatString="{0}" HeaderText="内容" />
@@ -47,7 +48,8 @@
                             </x:TemplateField>
                         </Columns>
                     </x:Grid>
-                    <x:Grid ID="Grid2" runat="server" Title="关键岗位胜任能力指标（优：81～100良：61～80中：31～60差：0～30）" ShowHeader="true">
+                    <x:Grid ID="Grid2" runat="server" Title="关键岗位胜任能力指标（优：81～100良：61～80中：31～60差：0～30）"
+                        ShowHeader="true">
                         <Columns>
                             <x:BoundField Width="100px" DataField="Title" DataFormatString="{0}" HeaderText="标题" />
                             <x:BoundField Width="150px" DataField="Quota1" DataFormatString="{0}" HeaderText="优" />
@@ -61,7 +63,8 @@
                             </x:TemplateField>
                         </Columns>
                     </x:Grid>
-                    <x:Grid ID="Grid3" runat="server" Title="关键工作态度指标（优：81～100良：61～80中：31～60差：0～30）" ShowHeader="true">
+                    <x:Grid ID="Grid3" runat="server" Title="关键工作态度指标（优：81～100良：61～80中：31～60差：0～30）"
+                        ShowHeader="true">
                         <Columns>
                             <x:BoundField Width="100px" DataField="Title" DataFormatString="{0}" HeaderText="标题" />
                             <x:BoundField Width="150px" DataField="Quota1" DataFormatString="{0}" HeaderText="优" />
@@ -86,7 +89,8 @@
                             </x:TemplateField>
                         </Columns>
                     </x:Grid>
-                    <x:Grid ID="Grid5" runat="server" Title="岗位胜任能力指标（优：81～100良：61～80中：31～60差：0～30）" ShowHeader="true">
+                    <x:Grid ID="Grid5" runat="server" Title="岗位胜任能力指标（优：81～100良：61～80中：31～60差：0～30）"
+                        ShowHeader="true">
                         <Columns>
                             <x:BoundField Width="100px" DataField="Title" DataFormatString="{0}" HeaderText="标题" />
                             <x:BoundField Width="150px" DataField="Quota1" DataFormatString="{0}" HeaderText="优" />
@@ -120,7 +124,7 @@
                             <x:BoundField Width="600px" DataField="Quota" DataFormatString="{0}" HeaderText="内容" />
                             <x:TemplateField Width="100px" HeaderText="得分">
                                 <ItemTemplate>
-                                    <asp:DropDownList runat="server" ID="DropDownList_Reject" Visible="false" >
+                                    <asp:DropDownList runat="server" ID="DropDownList_Reject" Visible="false">
                                         <asp:ListItem Text="0" Value="0"></asp:ListItem>
                                         <asp:ListItem Text="-100" Value="-100"></asp:ListItem>
                                     </asp:DropDownList>
