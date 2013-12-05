@@ -1,0 +1,11 @@
+2013/12/4 20:04:58: message原因：
+location:CES.Controller\EvaluationManagementCtrl\GetAllForEvaluate;
+message:当前考评状态不是已开始;
+2013/12/4 20:05:24: message原因：
+location:CES.DAL\EvaluatorInfoDAO\SearchEvaluatorInfoByLevel;
+message:查询结果为空;
+2013/12/4 20:05:33: message原因：
+location:CES.DAL\EvaluatorInfoDAO\SearchEvaluatorInfoByLevel;
+message:查询结果为空;
+2013/12/4 20:05:39: message原因：
+
