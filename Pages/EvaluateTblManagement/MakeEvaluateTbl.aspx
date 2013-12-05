@@ -588,16 +588,16 @@
                             <x:SimpleForm ID="SimpleForm_Reject1" runat="server" BodyPadding="5px" Title="SimpleForm"
                                 ShowHeader="false">
                                 <Items>
-                                    <x:TextBox ID="TextBox_Title_Reject1" runat="server" Label="1）标题" Text="">
+                                    <x:TextBox ID="TextBox_Title_Reject1" runat="server" Label="1）标题" Text="严重违反规章制度">
                                     </x:TextBox>
-                                    <x:TextArea ID="TextArea_Content_Reject1" runat="server" Height="50px" Label="内容" Text="" AutoGrowHeight="true">
+                                    <x:TextArea ID="TextArea_Content_Reject1" runat="server" Height="50px" Label="内容" Text="累计旷工3天以上的。违背职业道德，向病人及家属收取红包。严重失职，营私舞弊，给本单位造成3000元以上经济损失或者其它严重后果的。被依法追究刑事责任的。" AutoGrowHeight="true">
                                     </x:TextArea>
                                 </Items>
                             </x:SimpleForm>
                             <x:SimpleForm ID="SimpleForm_Reject2" runat="server" BodyPadding="5px" Title="SimpleForm"
                                 ShowHeader="false">
                                 <Items>
-                                    <x:TextBox ID="TextBox_Title_Reject2" runat="server" Label="2）标题" Text="">
+                                    <x:TextBox ID="TextBox_Title_Reject2" runat="server" Label="2）标题" Text="其它">
                                     </x:TextBox>
                                     <x:TextArea ID="TextArea_Content_Reject2" runat="server" Height="50px" Label="内容" Text="" AutoGrowHeight="true">
                                     </x:TextArea>
