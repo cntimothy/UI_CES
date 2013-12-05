@@ -44,7 +44,14 @@ namespace CES.UI.Pages.EvaluationManagement
             {
                 if (EvaluationManagementCtrl.UpdateScoreByID(evaluateTbl, evaluatorID, evaluatedID, ref exception))
                 {
-                    showInformation("保存成功！");
+                    if (!hasNullScore(evaluateTbl)) //如果没有空项
+                    {
+                        showInformation("保存成功！");
+                    }
+                    else
+                    {
+                        showInformation("保存成功！但是有未打分项目！");
+                    }
                     return;
                 }
                 else
@@ -449,6 +456,58 @@ namespace CES.UI.Pages.EvaluationManagement
         private void setEvaluatedName()
         {
             Label_Name.Text = "被考评人姓名：" + Request.QueryString["name"];
+        }
+
+        /// <summary>
+        /// 检查考核表的分数中有没有空项，有则返回true，否则返回false
+        /// </summary>
+        /// <param name="evaluateTbl"></param>
+        /// <returns></returns>
+        private bool hasNullScore(EvaluateTbl evaluateTbl)
+        {
+            foreach (Quota quota in evaluateTbl.KeyResponse)
+            {
+                if (quota.Score == -1)
+                {
+                    return true; ;
+                }
+            } 
+            foreach (Quota quota in evaluateTbl.KeyQualify)
+            {
+                if (quota.Score == -1)
+                {
+                    return true; ;
+                }
+            } 
+            foreach (Quota quota in evaluateTbl.KeyAttitude)
+            {
+                if (quota.Score == -1)
+                {
+                    return true; ;
+                }
+            }
+            foreach (Quota quota in evaluateTbl.Response)
+            {
+                if (quota.Score == -1)
+                {
+                    return true; ;
+                }
+            }
+            foreach (Quota quota in evaluateTbl.Qualify)
+            {
+                if (quota.Score == -1)
+                {
+                    return true; ;
+                }
+            }
+            foreach (Quota quota in evaluateTbl.Attitude)
+            {
+                if (quota.Score == -1)
+                {
+                    return true; ;
+                }
+            }
+            return false;
         }
         #endregion
     }

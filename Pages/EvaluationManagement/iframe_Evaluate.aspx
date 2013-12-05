@@ -114,7 +114,7 @@
                             </x:TemplateField>
                         </Columns>
                     </x:Grid>
-                    <x:Grid ID="Grid7" runat="server" Title="否决指标（0或者-10）" ShowHeader="true">
+                    <x:Grid ID="Grid7" runat="server" Title="否决指标（0或者-100）" ShowHeader="true">
                         <Columns>
                             <x:BoundField Width="100px" DataField="Title" DataFormatString="{0}" HeaderText="标题" />
                             <x:BoundField Width="600px" DataField="Quota" DataFormatString="{0}" HeaderText="内容" />

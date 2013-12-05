@@ -59,6 +59,8 @@ namespace CES.UI.Pages.EvaluationManagement
             }
             else
             {
+                int place = exception.IndexOf("message:");
+                exception = exception.Substring(place+8);
                 showError("提交失败！", exception);
                 return;
             }

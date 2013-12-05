@@ -185,8 +185,24 @@ namespace CES.UI.Pages.StaffManagement
             StaffType staffType = (StaffType)Enum.Parse(typeof(StaffType), DropDownList_StaffType.SelectedValue);
             if (StaffManagementCtrl.GetAll(ref table, staffType, ref exception))
             {
-                DataView dv = table.DefaultView;
-                dv.Sort = "Role ASC";                
+                DataRow[] drs = new DataRow[table.Rows.Count];
+                table.Rows.CopyTo(drs, 0);
+                DataRow[] dr1 = table.Select("Role like '%领导%'");
+                dr1.CopyTo(drs, 0);
+                DataRow[] dr2 = table.Select("Role like '%中层干部%'");
+                dr2.CopyTo(drs, dr1.Count());
+                DataRow[] dr3 = table.Select("Role like '%群众%'");
+                dr3.CopyTo(drs, dr1.Count()+dr2.Count());
+
+                DataTable dt = table.Clone();
+                dt.Clear();
+                foreach (DataRow dr in drs)
+                {
+                    dt.ImportRow(dr);
+                }
+
+                DataView dv = dt.DefaultView;
+                //dv.Sort = "Role ASC";                
                 Grid1.DataSource = dv;
                 Grid1.DataBind();
             }
