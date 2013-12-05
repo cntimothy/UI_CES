@@ -28,7 +28,7 @@
                             </x:Label>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
-                            <x:Button ID="Button_Save" runat="server" Text="保存" OnClick="Button_Save_Click">
+                            <x:Button ID="Button_Save" runat="server" Text="保存" OnClick="Button_Save_Click" ConfirmText="请确保完成所有指标的打分！">
                             </x:Button>
                             <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                             </x:ToolbarSeparator>
