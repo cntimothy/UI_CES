@@ -34,7 +34,7 @@
                         </Items>
                     </x:Toolbar>
                     <x:Panel ID="Panel3" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
-                        Title="Panel" Width="880px" >
+                        Title="Panel" Width="980px" >
                         <Items>
                             <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm" ShowBorder="false" ShowHeader="false">
                                 <Items>
@@ -42,7 +42,7 @@
                             </x:Label>
                                 </Items>
                             </x:SimpleForm>
-                            <x:Grid ID="Grid1" runat="server" Title="被考评人名单" AutoScroll="true" EnableRowNumber="true" AutoHeight="true" Width="830px">
+                            <x:Grid ID="Grid1" runat="server" Title="被考评人名单" AutoScroll="true" EnableRowNumber="true" AutoHeight="true" Width="930px">
                                 <Columns>
                                     <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="工号"
                                         Hidden="false" />
@@ -52,7 +52,7 @@
                                         Hidden="false" />
                                     <x:BoundField Width="150px" ExpandUnusedSpace="true" DataField="Job" DataFormatString="{0}" HeaderText="职务"
                                         Hidden="false" />
-                                    <x:BoundField Width="300px" DataField="Status" DataFormatString="{0}" HeaderText="考评完成情况"
+                                    <x:BoundField Width="400px" DataField="Status" DataFormatString="{0}" HeaderText="考评完成情况"
                                         Hidden="false" />
                                     <x:WindowField TextAlign="Center" Width="80px" WindowID="Window_ShowReport" Text="述职报告"
                                         ToolTip="查看述职报告" DataIFrameUrlFields="ID,Name" DataIFrameUrlFormatString="iframe_ShowReport.aspx?id={0}&name={1}"
