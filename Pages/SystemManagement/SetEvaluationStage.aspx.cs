@@ -183,12 +183,18 @@ namespace CES.UI.Pages.SystemManagement
                 {
                     case EvaluationStage.UNSTARTED:
                         Button_Start.Enabled = true;
+                        Button_Init.Enabled = false;
+                        Button_Stop.Enabled = false;
                         break;
                     case EvaluationStage.STARTED:
                         Button_Stop.Enabled = true;
+                        Button_Init.Enabled = false;
+                        Button_Start.Enabled = false;
                         break;
                     case EvaluationStage.FINISHED:
                         Button_Init.Enabled = true;
+                        Button_Start.Enabled = false;
+                        Button_Stop.Enabled = false;
                         break;
                     default:
                         break;
