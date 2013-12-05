@@ -54,6 +54,8 @@
                                         Hidden="false" />
                                     <x:BoundField Width="400px" DataField="Status" DataFormatString="{0}" HeaderText="考评完成情况"
                                         Hidden="false" />
+                                    <x:BoundField Width="100px" DataField="ReportStatus" DataFormatString="{0}" HeaderText="述职报告"
+                                        Hidden="false" />
                                     <x:WindowField TextAlign="Center" Width="80px" WindowID="Window_ShowReport" Text="述职报告"
                                         ToolTip="查看述职报告" DataIFrameUrlFields="ID,Name" DataIFrameUrlFormatString="iframe_ShowReport.aspx?id={0}&name={1}"
                                         Title="操作" IFrameUrl="iframe_ShowReport.aspx" />
