@@ -4,4 +4,8 @@
     <TreeNode Text="考评" NavigateUrl="~/Pages/EvaluationManagement/Evaluate.aspx?userid=[UserID]">
     </TreeNode>
   </TreeNode>
+  <TreeNode Text="账户管理" SingleClickExpand="true">
+    <TreeNode Text="修改密码" NavigateUrl="~/Pages/AccountManagement/ChangePasswd.aspx?userid=[UserID]">
+    </TreeNode>
+  </TreeNode>
 </Tree>
