@@ -157,6 +157,51 @@ namespace CES.UI.Pages.SystemManagement {
         protected global::FineUI.Grid Grid1;
         
         /// <summary>
+        /// SimpleForm2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.SimpleForm SimpleForm2;
+        
+        /// <summary>
+        /// Label_Name 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Label Label_Name;
+        
+        /// <summary>
+        /// Label_LeaderList 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Label Label_LeaderList;
+        
+        /// <summary>
+        /// Label_CadresList 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Label Label_CadresList;
+        
+        /// <summary>
+        /// Label_PeopleList 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Label Label_PeopleList;
+        
+        /// <summary>
         /// Window_ShowReport 控件。
         /// </summary>
         /// <remarks>

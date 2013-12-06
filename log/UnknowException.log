@@ -376,3 +376,47 @@ System.Web.HttpParseException (0x80004005): “FineUI.ControlBaseCollection”�
 “FineUI.ControlBaseCollection”内不允许包含文字内容(“<!--”)。来源:
 System.Web
 
+2013/12/6 22:19:00发生内部错误！
+错误号：1677222414
+内部错误:
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 CES.UI.Pages.SystemManagement.SetEvaluationStage.Grid1_RowCommand(Object sender, GridCommandEventArgs e) 位置 E:\projects\CES\CES.UI\Pages\SystemManagement\SetEvaluationStage.aspx.cs:行号 114
+   在 FineUI.Grid.OnRowCommand(GridCommandEventArgs e)
+   在 FineUI.Grid.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)堆栈:
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.pages_systemmanagement_setevaluationstage_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\7bf31551\e90934c0\App_Web_xn3yyysd.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)内容:
+引发类型为“System.Web.HttpUnhandledException”的异常。来源:
+System.Web
+
+2013/12/6 22:19:49发生内部错误！
+错误号：257186571
+内部错误:
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 CES.UI.Pages.SystemManagement.SetEvaluationStage.Grid1_RowCommand(Object sender, GridCommandEventArgs e) 位置 E:\projects\CES\CES.UI\Pages\SystemManagement\SetEvaluationStage.aspx.cs:行号 114
+   在 FineUI.Grid.OnRowCommand(GridCommandEventArgs e)
+   在 FineUI.Grid.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)堆栈:
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.pages_systemmanagement_setevaluationstage_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\7bf31551\e90934c0\App_Web_yrwyslst.2.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)内容:
+引发类型为“System.Web.HttpUnhandledException”的异常。来源:
+System.Web
+

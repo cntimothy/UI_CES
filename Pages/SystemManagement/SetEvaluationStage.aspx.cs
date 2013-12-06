@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using CES.Controller;
 using CES.DataStructure;
+using System.Text;
 
 namespace CES.UI.Pages.SystemManagement
 {
@@ -98,6 +99,53 @@ namespace CES.UI.Pages.SystemManagement
         protected void Window_Close(object sender, FineUI.WindowCloseEventArgs e)
         {
             //查看述职报告后什么都不做
+        }
+        
+        /// <summary>
+        /// 查看详细按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Grid1_RowCommand(object sender, FineUI.GridCommandEventArgs e)
+        {
+            if (e.CommandName == "Check")
+            {
+                object[] keys = Grid1.DataKeys[e.RowIndex];
+                Label_Name.Text = keys[1].ToString();
+                string evaluatedID = keys[0].ToString();
+                string exception = "";
+                List<string> leaderList = new List<string>();
+                List<string> cadresList = new List<string>();
+                List<string> peopleList = new List<string>();
+                if (SystemManagementCtrl.GetDetailEvaluationStatus(ref leaderList, ref cadresList, ref peopleList, evaluatedID, ref exception))
+                {
+                    StringBuilder sb = new StringBuilder();
+
+                    foreach (string name in leaderList) //领导
+                    {
+                        sb.Append(name + " ");
+                    }
+                    Label_LeaderList.Text = sb.ToString();
+                    sb.Clear();
+
+                    foreach (string name in cadresList) //中层干部
+                    {
+                        sb.Append(name + " ");
+                    }
+                    Label_CadresList.Text = sb.ToString();
+                    sb.Clear();
+
+                    foreach (string name in peopleList) //群众
+                    {
+                        sb.Append(name + " ");
+                    }
+                    Label_PeopleList.Text = sb.ToString();
+                }
+                else
+                {
+                    showError("获取详细信息失败！", exception);
+                }
+            }
         }
         #endregion
 
