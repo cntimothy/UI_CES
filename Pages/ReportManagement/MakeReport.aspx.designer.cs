@@ -76,13 +76,13 @@ namespace CES.UI.Pages.ReportManagement {
         protected global::FineUI.ToolbarSeparator ToolbarSeparator1;
         
         /// <summary>
-        /// Button_Save 控件。
+        /// Button_Submit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Button Button_Save;
+        protected global::FineUI.Button Button_Submit;
         
         /// <summary>
         /// Panel3 控件。

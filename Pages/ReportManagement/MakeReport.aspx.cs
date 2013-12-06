@@ -39,11 +39,11 @@ namespace CES.UI.Pages.ReportManagement
         }
 
         /// <summary>
-        /// 保存按钮事件
+        /// 提交按钮事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void Button_Save_Click(object sender, EventArgs e)
+        protected void Button_Submit_Click(object sender, EventArgs e)
         {
             string exception = "";
             string id = ViewState["UserID"].ToString();
@@ -131,7 +131,7 @@ namespace CES.UI.Pages.ReportManagement
             {
                 if (evaluationStage == EvaluationStage.UNSTARTED)
                 {
-                    Button_Save.Enabled = true;
+                    Button_Submit.Enabled = true;
                 }
             }
             else
