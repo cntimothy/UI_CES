@@ -172,6 +172,33 @@ namespace CES.UI.Pages.StaffManagement
         {
             bindStaffInfoToGrid();
         }
+
+        /// <summary>
+        /// 搜索按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Search_Click(object sender, EventArgs e)
+        {
+            string exception = "";
+            string name = TextBox_Name.Text.Trim();
+            if (name == "") //如果姓名为空，提示信息
+            {
+                showInformation("姓名不能为空！");
+                return;
+            }
+            DataTable table = new DataTable();
+            if (StaffManagementCtrl.SearchStaffByName(ref table, name, ref exception))
+            {
+                Grid1.DataSource = table;
+                Grid1.DataBind();
+            }
+            else
+            {
+                writeErrorToLog("搜索员工信息失败！", exception);
+                return;
+            }
+        }
         #endregion
 
         #region Private Method

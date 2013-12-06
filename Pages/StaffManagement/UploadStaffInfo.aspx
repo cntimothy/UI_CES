@@ -49,16 +49,27 @@
                     <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
                         Title="" Width="800px">
                         <Items>
-                            <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm"
-                                ShowBorder="false" ShowHeader="false">
-                                <Items>
-                                    <x:DropDownList ID="DropDownList_StaffType" runat="server" Label="请选择员工类型" AutoPostBack="true"
-                                        OnSelectedIndexChanged="DropDownList_StaffType_SelectedChanged">
-                                        <x:ListItem EnableSelect="true" Selected="true" Text="所有人" Value="0" />
-                                        <x:ListItem EnableSelect="true" Selected="false" Text="中层干部" Value="1" />
-                                    </x:DropDownList>
-                                </Items>
-                            </x:SimpleForm>
+                            <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="Form" ShowBorder="false" ShowHeader="false">
+                                <Rows>
+                                    <x:FormRow ID="FormRow1" runat="server">
+                                        <Items>
+                                            <x:TextBox ID="TextBox_Name" runat="server" Label="输入姓名" Text="">
+                                            </x:TextBox>
+                                            <x:Button ID="Button_Search" runat="server" Text="搜索" OnClick="Button_Search_Click">
+                                            </x:Button>
+                                        </Items>
+                                    </x:FormRow>
+                                    <x:FormRow ID="FormRow2" runat="server">
+                                        <Items>
+                                            <x:DropDownList ID="DropDownList_StaffType" runat="server" Label="请选择员工类型" AutoPostBack="true"
+                                                OnSelectedIndexChanged="DropDownList_StaffType_SelectedChanged">
+                                                <x:ListItem EnableSelect="true" Selected="true" Text="所有人" Value="0" />
+                                                <x:ListItem EnableSelect="true" Selected="false" Text="中层干部" Value="1" />
+                                            </x:DropDownList>
+                                        </Items>
+                                    </x:FormRow>
+                                </Rows>
+                            </x:Form>
                             <x:Grid ID="Grid1" runat="server" Title="员工名单" AllowPaging="true" PageSize="20" EnableRowNumber="true"
                                 Height="500px" Width="730px" AutoScroll="true" DataKeyNames="ID" EnableCheckBoxSelect="true"
                                 CheckBoxSelectOnly="true" OnPageIndexChange="Grid1_PageIndexChange" ClearSelectedRowsAfterPaging="false">
