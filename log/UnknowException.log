@@ -346,3 +346,33 @@ System.NotImplementedException: 未实现该方法或操作。
 引发类型为“System.Web.HttpUnhandledException”的异常。来源:
 System.Web
 
+2013/12/6 20:07:18发生内部错误！
+错误号：1758220532
+内部错误:
+System.Web.HttpParseException (0x80004005): “FineUI.ControlBaseCollection”内不允许包含文字内容(“<!--”)。 ---> System.Web.HttpException (0x80004005): “FineUI.ControlBaseCollection”内不允许包含文字内容(“<!--”)。
+   在 System.Web.UI.CollectionBuilder.AppendLiteralString(String s)
+   在 System.Web.UI.TemplateParser.ProcessLiteral()
+   在 System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)堆栈:
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseInternal()
+   在 System.Web.UI.TemplateParser.Parse()
+   在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)内容:
+“FineUI.ControlBaseCollection”内不允许包含文字内容(“<!--”)。来源:
+System.Web
+

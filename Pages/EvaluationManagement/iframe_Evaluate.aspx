@@ -118,20 +118,6 @@
                             </x:TemplateField>
                         </Columns>
                     </x:Grid>
-                    <x:Grid ID="Grid7" runat="server" Title="否决指标（0或者-100）" ShowHeader="true">
-                        <Columns>
-                            <x:BoundField Width="100px" DataField="Title" DataFormatString="{0}" HeaderText="标题" />
-                            <x:BoundField Width="600px" DataField="Quota" DataFormatString="{0}" HeaderText="内容" />
-                            <x:TemplateField Width="100px" HeaderText="得分">
-                                <ItemTemplate>
-                                    <asp:DropDownList runat="server" ID="DropDownList_Reject" Visible="false">
-                                        <asp:ListItem Text="0" Value="0"></asp:ListItem>
-                                        <asp:ListItem Text="-100" Value="-100"></asp:ListItem>
-                                    </asp:DropDownList>
-                                </ItemTemplate>
-                            </x:TemplateField>
-                        </Columns>
-                    </x:Grid>
                     <x:Toolbar ID="Toolbar2" runat="server">
                         <Items>
                             <x:ToolbarFill ID="ToolbarFill2" runat="server">

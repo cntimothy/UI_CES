@@ -211,24 +211,6 @@ namespace CES.UI.Pages.EvaluationManagement {
         protected global::System.Web.UI.WebControls.TextBox TextBox_Score6;
         
         /// <summary>
-        /// Grid7 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Grid Grid7;
-        
-        /// <summary>
-        /// DropDownList_Reject 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Reject;
-        
-        /// <summary>
         /// Toolbar2 控件。
         /// </summary>
         /// <remarks>

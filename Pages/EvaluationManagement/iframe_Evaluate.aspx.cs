@@ -174,18 +174,18 @@ namespace CES.UI.Pages.EvaluationManagement
                 Grid6.DataBind();
 
                 //否决指标
-                DataTable table7 = new DataTable();
-                table7.Columns.Add("Title");
-                table7.Columns.Add("Quota");
-                foreach (Quota item in evaluateTbl.Reject)
-                {
-                    table7.Rows.Add(item.Title, item.Content[0]);
-                }
-                Grid7.DataSource = table7;
-                Grid7.DataBind();
-                System.Web.UI.WebControls.DropDownList ddl = Grid7.Rows[0].FindControl("DropDownList_Reject") as System.Web.UI.WebControls.DropDownList;
-                ddl.Visible = true;
-                ddl.SelectedValue = evaluateTbl.Reject[0].Score.ToString();
+                //DataTable table7 = new DataTable();
+                //table7.Columns.Add("Title");
+                //table7.Columns.Add("Quota");
+                //foreach (Quota item in evaluateTbl.Reject)
+                //{
+                //    table7.Rows.Add(item.Title, item.Content[0]);
+                //}
+                //Grid7.DataSource = table7;
+                //Grid7.DataBind();
+                //System.Web.UI.WebControls.DropDownList ddl = Grid7.Rows[0].FindControl("DropDownList_Reject") as System.Web.UI.WebControls.DropDownList;
+                //ddl.Visible = true;
+                //ddl.SelectedValue = evaluateTbl.Reject[0].Score.ToString();
             }
         }
 
@@ -395,19 +395,22 @@ namespace CES.UI.Pages.EvaluationManagement
             }
 
             //否决指标
-            GridRow gridRow = Grid7.Rows[0];
-            System.Web.UI.WebControls.DropDownList ddl = gridRow.FindControl("DropDownList_Reject") as System.Web.UI.WebControls.DropDownList;
-            tempScores.Add(ddl.SelectedValue);
-            if (!checkScores(tempScores, ref exception))
-            {
-                returnValue = false;
-                return returnValue;
-            }
-            else
-            {
-                evaluateTbl.Reject.Add(new Quota("", new string[] { "" }, getScoreFormStr(tempScores[0])));
-                tempScores.Clear();
-            }
+            //GridRow gridRow = Grid7.Rows[0];
+            //System.Web.UI.WebControls.DropDownList ddl = gridRow.FindControl("DropDownList_Reject") as System.Web.UI.WebControls.DropDownList;
+            //tempScores.Add(ddl.SelectedValue);
+            //if (!checkScores(tempScores, ref exception))
+            //{
+            //    returnValue = false;
+            //    return returnValue;
+            //}
+            //else
+            //{
+            //    evaluateTbl.Reject.Add(new Quota("", new string[] { "" }, getScoreFormStr(tempScores[0])));
+            //    tempScores.Clear();
+            //}
+
+            //加上空的否决指标
+            evaluateTbl.Reject.Add(new Quota("", new string[] { "" }, 0));
 
             return returnValue;
         }
