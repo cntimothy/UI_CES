@@ -420,3 +420,107 @@ System.IndexOutOfRangeException: 索引超出了数组界限。
 引发类型为“System.Web.HttpUnhandledException”的异常。来源:
 System.Web
 
+2013/12/6 22:31:14发生内部错误！
+错误号：800530750
+内部错误:
+System.ArgumentException: 该行已经属于另一个表。
+   在 System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   在 System.Data.DataRowCollection.Add(DataRow row)
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.processTable(DataTable table) 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 185
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.bindStaffInfoToGrid() 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 108
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.Page_Load(Object sender, EventArgs e) 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 23
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)堆栈:
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.pages_evaluationmanagement_evaluate_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\7bf31551\e90934c0\App_Web_412rczxg.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)内容:
+引发类型为“System.Web.HttpUnhandledException”的异常。来源:
+System.Web
+
+2013/12/6 22:31:49发生内部错误！
+错误号：544989899
+内部错误:
+System.ArgumentException: 该行已经属于另一个表。
+   在 System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   在 System.Data.DataRowCollection.Add(DataRow row)
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.processTable(DataTable table) 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 185
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.bindStaffInfoToGrid() 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 108
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.Page_Load(Object sender, EventArgs e) 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 23
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)堆栈:
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.pages_evaluationmanagement_evaluate_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\7bf31551\e90934c0\App_Web_412rczxg.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)内容:
+引发类型为“System.Web.HttpUnhandledException”的异常。来源:
+System.Web
+
+2013/12/6 22:32:24发生内部错误！
+错误号：2017776658
+内部错误:
+System.ArgumentException: 该行已经属于另一个表。
+   在 System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   在 System.Data.DataRowCollection.Add(DataRow row)
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.processTable(DataTable table) 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 190
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.bindStaffInfoToGrid() 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 108
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.Page_Load(Object sender, EventArgs e) 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 23
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)堆栈:
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.pages_evaluationmanagement_evaluate_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\7bf31551\e90934c0\App_Web_ddeah4n0.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)内容:
+引发类型为“System.Web.HttpUnhandledException”的异常。来源:
+System.Web
+
+2013/12/6 22:32:45发生内部错误！
+错误号：1842352576
+内部错误:
+System.ArgumentException: 该行已经属于另一个表。
+   在 System.Data.DataTable.InsertRow(DataRow row, Int64 proposedID, Int32 pos, Boolean fireEvent)
+   在 System.Data.DataRowCollection.Add(DataRow row)
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.processTable(DataTable table) 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 190
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.bindStaffInfoToGrid() 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 108
+   在 CES.UI.Pages.EvaluationManagement.Evaluate.Page_Load(Object sender, EventArgs e) 位置 E:\projects\CES\CES.UI\Pages\EvaluationManagement\Evaluate.aspx.cs:行号 23
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)堆栈:
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.pages_evaluationmanagement_evaluate_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\7bf31551\e90934c0\App_Web_ddeah4n0.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)内容:
+引发类型为“System.Web.HttpUnhandledException”的异常。来源:
+System.Web
+

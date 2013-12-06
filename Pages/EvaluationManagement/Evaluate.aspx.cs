@@ -105,6 +105,7 @@ namespace CES.UI.Pages.EvaluationManagement
             
             if (EvaluationManagementCtrl.GetAllForEvaluate(ref table, evaluatorID, ref exception))
             {
+                table = processTable(table); //从被考评人名单中删除“朱冰”和“黄培燕”
                 Grid1.DataSource = table;
                 Grid1.DataBind();
             }
@@ -164,6 +165,33 @@ namespace CES.UI.Pages.EvaluationManagement
         {
             string evaluatorID = ViewState["UserID"].ToString();
             Button_Submit.Enabled = EvaluationManagementCtrl.IsSubmitable(evaluatorID);
+        }
+
+        /// <summary>
+        /// 从被考评人名单中删除“朱冰”和“黄培燕”
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
+        private DataTable processTable(DataTable table)
+        {
+            DataTable newTable = new DataTable();
+            newTable.Columns.Add("ID");
+            newTable.Columns.Add("Name");
+            newTable.Columns.Add("Sex");
+            newTable.Columns.Add("Job");
+            newTable.Columns.Add("Status");
+            int year = DateTime.Now.ToLocalTime().Year;
+            if (year == 2013)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    if (row["Name"].ToString() != "朱冰" && row["Name"].ToString() != "黄培燕")
+                    {
+                        newTable.Rows.Add(row["ID"], row["Name"], row["Sex"], row["Job"], row["Status"]);
+                    }
+                }
+            }
+            return newTable;
         }
         #endregion
     }
