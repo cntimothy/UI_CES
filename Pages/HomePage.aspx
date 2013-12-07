@@ -32,7 +32,7 @@
                                     </x:LinkButton>
                                 </li><li class="list">&nbsp|&nbsp</li>
                                 <li class="list">
-                                    <a href="../helpdoc/同济大学校医院考评系统软件使用说明书.htm">帮助</a>
+                                    <a href="../helpdoc/同济大学校医院考评系统软件使用说明书.htm">操作手册</a>
                                 </li>
                             </ul>
                         </div>
